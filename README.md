@@ -22,3 +22,8 @@ cd snap-nuke
 ## Legal
 This repository is under the [unlicense](LICENSE.txt) license. You are free to use this however you want,
 but we are NOT providing any warranty that the script wont break the system. You have been warned.
+
+## Todo
+- [ ] Ubuntu 18.04 LTS Support
+- [x] Ubuntu 20.04 LTS Support
+- [ ] Ubuntu Server 20.04 LTS Support
