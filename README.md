@@ -1,9 +1,11 @@
 # Snap Nuke
 This script nukes the snap package manager from Ubuntu.
 
-**Note**: This has only been tested on Ubuntu 20.04 LTS, and may not work 
-as intended on other versions. I will not be responsible for any damage if this
+**Disclaimer**: This has only been tested on Ubuntu 20.04 LTS, and may not work 
+as intended on other versions. I will **NOT** be responsible for any damage if this
 script breaks your pc.
+
+**It also removes the GUI Ubuntu Store, this will be fixed in a future update.**
 
 If you really want a snap-less Ubuntu that is guaranteed to not break,
 you may want to try [Pop!_OS](https://pop.system76.com/) or [Linux Mint](https://linuxmint.com/)
@@ -27,3 +29,4 @@ but we are NOT providing any warranty that the script wont break the system. You
 - [ ] Ubuntu 18.04 LTS Support
 - [x] Ubuntu 20.04 LTS Support
 - [ ] Ubuntu Server 20.04 LTS Support
+- [ ] Fix GUI store removal
