@@ -40,11 +40,13 @@ do
     sudo umount $I
 done
 
-echo "UGFja2FnZTogc25hcGQKUGluOiByZWxlYXNlIGE9KgpQaW4tUHJpb3JpdHk6IC0xMAo=" | base64 -d > nosnap.pref
+cat << EOF > nosnap.pref
+Package: snapd
+Pin: release a=*
+Pin-Priority: -10
+EOF
 
-sudo cp nosnap.pref /etc/apt/preferences.d/nosnap.pref
-
-rm nosnap.pref
+sudo mv nosnap.pref /etc/apt/preferences.d/nosnap.pref
 
 sudo apt-get purge snapd
 rm -rf ~/snap
