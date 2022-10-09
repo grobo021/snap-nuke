@@ -1,6 +1,5 @@
 #!/bin/bash
-if [[ "$EUID" == 0 ]]
-then 
+if [[ "$EUID" == 0 ]]; then 
 cat << EOF
 ┌──────────────────────────────────────────────────────────────────────┐
 │Please don't run this script as root as it may break you system.      │
@@ -22,7 +21,7 @@ cat << EOF
 EOF
 
 while true; do
-    read -p "Do you wish to run the script? " yn
+    read -p "Do you wish to run the script? [y/n] " yn
     case $yn in
         [Yy]* ) break;;
         [Nn]* ) exit;;
@@ -40,13 +39,11 @@ do
     sudo umount $I
 done
 
-cat << EOF > nosnap.pref
+sudo tee /etc/apt/preferences.d/nosnap.pref << EOF > /dev/null
 Package: snapd
 Pin: release a=*
 Pin-Priority: -10
 EOF
-
-sudo mv nosnap.pref /etc/apt/preferences.d/nosnap.pref
 
 sudo apt-get purge snapd
 rm -rf ~/snap
